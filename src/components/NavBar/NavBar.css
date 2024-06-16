@@ -1,0 +1,30 @@
+nav{
+    height: 100%-3em;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em;
+    padding-top: 3em;
+}
+
+nav .navItem{
+    color: rgb(63, 63, 63);
+    padding: 0.6em;
+    margin: 0.1em;
+    border-radius: 0.5em;
+    width: 6em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+nav .navItem:hover{
+    background-color: rgb(18, 173, 77);
+    color: white;
+    transition: 0.2bs;
+}
+
+nav .navIcon{
+    margin-right: 0.4em;
+    height: 1em;
+    width: 1em;
+}
