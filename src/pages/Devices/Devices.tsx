@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import CardRouterItem from "../../components/CardRouterItem/CardRouterItem";
+import './Devices.css'
 
 const Devices: React.FC = () => {
   const [devices, setDevices] = useState<any[]>([]);
@@ -13,7 +15,6 @@ const Devices: React.FC = () => {
         const data: any[] = await response.json();
         setDevices(data);
 
-        console.log(devices);
         console.log(data);
       } catch (error) {
         console.error(error);
@@ -24,14 +25,20 @@ const Devices: React.FC = () => {
   }, []);
 
   return (
-    <>
-      <h2>Devices</h2>
-      <ul>
-        {devices.map((device, index) => (
-          <li key={index}>{JSON.stringify(device._deviceId._SerialNumber)}</li>
-        ))}
-      </ul>
-    </>
+    <section className="devicesContainer">
+      <h1>Devices</h1>
+      <span>Gerencie os dispositivos na sua rede.</span>
+      <div className="deviceListContainer">
+        <div className="deviceListHeader">
+          <p>teste</p>
+        </div>
+        <div className="deviceList">
+          {devices.map((device, index) => (
+            <CardRouterItem key={index} props={device}/>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 
