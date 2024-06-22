@@ -1,29 +1,17 @@
-import React, { useEffect, useState } from "react";
 import CardRouterItem from "../../components/CardRouterItem/CardRouterItem";
-import './Devices.css'
+import './Devices.css';
 
-const Devices: React.FC = () => {
-  const [devices, setDevices] = useState<any[]>([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("/api/devices");
-        if (!response.ok) {
-          throw new Error(`Error: ${response.statusText}`);
-        }
-        const data: any[] = await response.json();
-        setDevices(data);
+interface Device {
+  id: string;
+  name: string;
+}
+interface DevicesProps {
+  devicesList: Device[];
+}
 
-        console.log(data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
 
-    fetchData();
-  }, []);
-
+const Devices: React.FC<DevicesProps> = ({ devicesList }) => {
   return (
     <section className="devicesContainer">
       <h1>Devices</h1>
@@ -33,8 +21,8 @@ const Devices: React.FC = () => {
           <p>teste</p>
         </div>
         <div className="deviceList">
-          {devices.map((device, index) => (
-            <CardRouterItem key={index} props={device}/>
+          {devicesList.map((device, index) => (
+            <CardRouterItem key={index} props={device} />
           ))}
         </div>
       </div>
