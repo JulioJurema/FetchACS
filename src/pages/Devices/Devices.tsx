@@ -1,4 +1,5 @@
-import CardRouterItem from "../../components/CardRouterItem/CardRouterItem";
+import CardRouterItem from "../../components/CardDevicesItem/CardDevicesItem";
+import Title from "../../components/Title/Title";
 import './Devices.css';
 
 
@@ -10,15 +11,16 @@ interface DevicesProps {
   devicesList: Device[];
 }
 
-
 const Devices: React.FC<DevicesProps> = ({ devicesList }) => {
   return (
     <section className="devicesContainer">
-      <h1>Devices</h1>
-      <span>Gerencie os dispositivos na sua rede.</span>
+      <Title text="Dispositivos" description="Gerencie os dispositivos na sua rede."/>
       <div className="deviceListContainer">
         <div className="deviceListHeader">
-          <p>teste</p>
+          <input className="searchDevices"
+            type="text"
+            placeholder="Pesquisar dispositivos..."
+          />
         </div>
         <div className="deviceList">
           {devicesList.map((device, index) => (

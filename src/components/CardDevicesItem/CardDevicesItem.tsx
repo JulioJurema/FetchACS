@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './CardRouterItem.css'
+import './CardDevicesItem.css'
 
 
 interface AllProps{

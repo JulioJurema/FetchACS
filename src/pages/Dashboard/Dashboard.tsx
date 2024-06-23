@@ -1,9 +1,10 @@
-
+import Title from "../../components/Title/Title";
 
 const Dashboard: React.FC = () => {
     return(
         <>
-            <h2>Dashboard</h2>
+
+            <Title text="Dashboard" description="Monitore sua rede de forma simples."/>
         </>
     );
 };

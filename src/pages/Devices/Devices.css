@@ -11,4 +11,19 @@
 }
 .deviceList::-webkit-scrollbar {
     display: none;
+}
+
+.searchDevices {
+    width: 15em;
+    padding: 7px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 4px;
   }
+  
+  .searchDevices::placeholder {
+    color: #999; /* Cor do texto do placeholder */
+  }
+  
