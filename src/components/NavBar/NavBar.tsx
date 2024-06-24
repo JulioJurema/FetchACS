@@ -4,12 +4,10 @@ import "./NavBar.css"
 
 const NavBar: React.FC = () => {
     return(
-        <>
-            <nav>
-                <Link className="navItem" to="/"><AiFillAppstore className="navIcon" /> Dashboard</Link>
-                <Link className="navItem" to="/devices"><AiFillHdd className="navIcon" /> Devices</Link>
-            </nav>
-        </>
+        <nav>
+            <Link className="navItem" to="/"><AiFillAppstore className="navIcon" /> Dashboard</Link>
+            <Link className="navItem" to="/devices"><AiFillHdd className="navIcon" /> Devices</Link>
+        </nav>
     );
 };
 

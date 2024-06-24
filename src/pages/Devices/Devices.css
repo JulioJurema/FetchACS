@@ -3,12 +3,27 @@
     overflow: auto;
 }
 
+.legendList{
+  display: flex;
+  flex-direction: row;
+  margin: 0 1.7em;
+  padding-left: 1px;
+}
+
+.legendList p{
+  max-width: 8em;
+  min-width: 8em;
+  margin-right: 2em;
+  
+}
+
 .deviceList{
     overflow: auto;
     max-height: 60vh;
     min-height: 50vh;
 
 }
+
 .deviceList::-webkit-scrollbar {
     display: none;
 }
@@ -27,3 +42,7 @@
     color: #999; /* Cor do texto do placeholder */
   }
   
+  .activeNavItem {
+    color: #007bff; /* cor do texto quando ativo */
+    font-weight: bold; /* peso da fonte quando ativo */
+}

@@ -16,6 +16,8 @@
 .cardPreview{
     display: flex;
     flex-direction: row;
+    text-decoration: none;
+    color: rgb(34, 34, 34);
 }
 
 .cardContainer p{

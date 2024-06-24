@@ -20,7 +20,7 @@ nav .navItem{
 nav .navItem:hover{
     background-color: rgb(18, 173, 77);
     color: white;
-    transition: 0.2bs;
+    transition: 0.2s;
 }
 
 nav .navIcon{
