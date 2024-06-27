@@ -1,12 +1,32 @@
-import { AiFillAppstore, AiFillHdd } from "react-icons/ai"
-import { Link } from "react-router-dom";
-import "./NavBar.css"
+import { AiFillAppstore, AiFillHdd, AiFillSetting, AiFillFolder, AiOutlineLogout} from "react-icons/ai";
+import { NavLink } from "react-router-dom";
+import "./NavBar.css";
 
 const NavBar: React.FC = () => {
     return(
         <nav>
-            <Link className="navItem" to="/"><AiFillAppstore className="navIcon" /> Dashboard</Link>
-            <Link className="navItem" to="/devices"><AiFillHdd className="navIcon" /> Devices</Link>
+            <div>
+                <div>
+                    <img className="logo" src="/public/Logo.svg" alt="Logo site" />
+                </div>
+                <div>
+                    <NavLink className={({ isActive }) => isActive ? "navItem active" : "navItem"} to="/">
+                        <AiFillAppstore className="navIcon" /> Dashboard
+                    </NavLink>
+                    <NavLink className={({ isActive }) => isActive ? "navItem active" : "navItem"} to="/devices">
+                        <AiFillHdd className="navIcon" /> Devices
+                    </NavLink>
+                    <NavLink className={({ isActive }) => isActive ? "navItem active" : "navItem"} to="/">
+                        <AiFillFolder className="navIcon" /> Files
+                    </NavLink>
+                    <NavLink className={({ isActive }) => isActive ? "navItem active" : "navItem"} to="/">
+                        <AiFillSetting className="navIcon" /> Config
+                    </NavLink>
+                </div>
+            </div>
+            <div>
+                <button className="logOut"><AiOutlineLogout /> Logout</button>
+            </div>
         </nav>
     );
 };

@@ -2,8 +2,8 @@ nav{
     height: 100%-3em;
     display: flex;
     flex-direction: column;
-    padding: 0 1em;
-    padding-top: 3em;
+    padding: 2em 1em;
+    justify-content: space-between;
 }
 
 nav .navItem{
@@ -11,14 +11,14 @@ nav .navItem{
     padding: 0.6em;
     margin: 0.1em;
     border-radius: 0.5em;
-    width: 6em;
+    width: auto;
     text-decoration: none;
     display: flex;
     align-items: center;
 }
 
 nav .navItem:hover{
-    background-color: rgb(18, 173, 77);
+    background-color: rgb(113, 195, 144);
     color: white;
     transition: 0.2s;
 }
@@ -27,4 +27,20 @@ nav .navIcon{
     margin-right: 0.4em;
     height: 1em;
     width: 1em;
+}
+
+.logo{
+    width: 7.5em;
+    margin-bottom: 2em;
+}
+
+.navItem.active {
+    background-color: rgb(18, 173, 77);
+    color: white;
+    transition: 0.2s;
+  }
+
+.logOut{
+    background-color: #fff;
+    border: none;
 }

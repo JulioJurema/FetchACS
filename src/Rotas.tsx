@@ -41,7 +41,7 @@ const Rotas: React.FC = () => {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/devices" element={<Devices devicesList={devices} />} />
-            <Route path="/devices/:id" element={< DeviceInfo />} />
+            <Route path="/devices/:id" element={< DeviceInfo dataDevice={[]} />} />
           </Routes>
         </div>
       </div>
