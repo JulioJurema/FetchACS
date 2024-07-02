@@ -1,0 +1,21 @@
+.hostListContainer{
+    max-height: auto;
+    max-width: 20em;
+    background-color: #ececec;
+    padding: 1em;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+}
+.hostListContainer h3{
+    margin-bottom: 0.5em;
+}
+
+.hostListAlign::-webkit-scrollbar {
+    display: none;
+}
+
+.hostListAlign{
+    overflow: auto;
+    max-height: 23em;
+}

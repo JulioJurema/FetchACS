@@ -11,16 +11,16 @@ const NavBar: React.FC = () => {
                 </div>
                 <div>
                     <NavLink className={({ isActive }) => isActive ? "navItem active" : "navItem"} to="/">
-                        <AiFillAppstore className="navIcon" /> Dashboard
+                        <AiFillAppstore className="navIcon" size={20}/> Dashboard
                     </NavLink>
                     <NavLink className={({ isActive }) => isActive ? "navItem active" : "navItem"} to="/devices">
-                        <AiFillHdd className="navIcon" /> Devices
+                        <AiFillHdd className="navIcon" size={20}/> Devices
                     </NavLink>
                     <NavLink className={({ isActive }) => isActive ? "navItem active" : "navItem"} to="/">
-                        <AiFillFolder className="navIcon" /> Files
+                        <AiFillFolder className="navIcon" size={20}/> Files
                     </NavLink>
                     <NavLink className={({ isActive }) => isActive ? "navItem active" : "navItem"} to="/">
-                        <AiFillSetting className="navIcon" /> Config
+                        <AiFillSetting className="navIcon" size={20}/> Config
                     </NavLink>
                 </div>
             </div>

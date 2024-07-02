@@ -1,14 +1,12 @@
-import { Route, Routes } from "react-router"
-import { BrowserRouter } from "react-router-dom"
-import Dashboard from "./pages/Dashboard/Dashboard"
-import Devices from "./pages/Devices/Devices"
-import DeviceInfo from "./pages/DeviceInfo/DeviceInfo"
-import React, { useEffect, useState } from "react"
-import NavBar from "./components/NavBar/NavBar"
+import { Route, Routes } from "react-router";
+import { BrowserRouter } from "react-router-dom";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Devices from "./pages/Devices/Devices";
+import DeviceInfo from "./pages/DeviceInfo/DeviceInfo";
+import React, { useEffect, useState } from "react";
+import NavBar from "./components/NavBar/NavBar";
 
-import "./index.css"
-
-
+import "./index.css";
 
 const Rotas: React.FC = () => {
   const [devices, setDevices] = useState<any[]>([]);
@@ -23,7 +21,7 @@ const Rotas: React.FC = () => {
         const data: any[] = await response.json();
         setDevices(data);
 
-        console.log(data);
+        //console.log(data);
       } catch (error) {
         console.error(error);
       }
@@ -31,7 +29,6 @@ const Rotas: React.FC = () => {
 
     fetchData();
   }, []);
-
 
   return (
     <BrowserRouter>
@@ -41,12 +38,12 @@ const Rotas: React.FC = () => {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/devices" element={<Devices devicesList={devices} />} />
-            <Route path="/devices/:id" element={< DeviceInfo dataDevice={[]} />} />
+            <Route path="/devices/:id" element={<DeviceInfo devices={devices} />} />
           </Routes>
         </div>
       </div>
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default Rotas
+export default Rotas;

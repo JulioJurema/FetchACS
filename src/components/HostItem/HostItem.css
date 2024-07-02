@@ -1,0 +1,45 @@
+.hostItem{
+    margin-bottom: 5px;
+    background-color: #ffffff;
+    display: flex; 
+    padding: 0 1em;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+.hostItem h4{
+    font-size: 0.8em;
+    font-weight: 900;
+    color: rgb(35, 35, 35);
+    height: 1em;
+}
+
+.hide{
+    display: none;
+}
+
+.hostItem span{
+    font-size: 0.9em;
+    font-weight: 400;
+    color: #5e5e5e;
+}
+.hostItem button{
+    height: 3em;
+    width: 3em;
+    background-color: #ffffff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c24949;
+}
+.hostItem button:hover{
+    transition: 0.3s;
+    background-color: #e42323;
+    color: #fff;
+}
+
+.infoContainer{
+    padding: 5px;
+}
