@@ -31,18 +31,20 @@ const Rotas: React.FC = () => {
   }, []);
 
   return (
-    <BrowserRouter>
-      <div className="containerScreen">
-        <NavBar />
-        <div className="alignPages">
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/devices" element={<Devices devicesList={devices} />} />
-            <Route path="/devices/:id" element={<DeviceInfo devices={devices} />} />
-          </Routes>
+    <section className="screen">
+      <BrowserRouter>
+        <div className="containerScreen">
+          <NavBar />
+          <div className="alignPages">
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/devices" element={<Devices devicesList={devices} />} />
+              <Route path="/devices/:id" element={<DeviceInfo devices={devices} />} />
+            </Routes>
+          </div>
         </div>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </section>
   );
 };
 

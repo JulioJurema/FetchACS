@@ -14,7 +14,7 @@
   max-width: 8em;
   min-width: 8em;
   margin-right: 2em;
-  
+  color: var(--text-dark);
 }
 
 .deviceList{
@@ -39,10 +39,10 @@
   }
   
   .searchDevices::placeholder {
-    color: #999; /* Cor do texto do placeholder */
+    color: #999; 
   }
   
   .activeNavItem {
-    color: #007bff; /* cor do texto quando ativo */
-    font-weight: bold; /* peso da fonte quando ativo */
+    color: #007bff; 
+    font-weight: bold; 
 }

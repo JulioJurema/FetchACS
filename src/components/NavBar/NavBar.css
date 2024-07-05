@@ -1,13 +1,19 @@
 nav{
-    height: 100%-3em;
+    margin-right: 0;
+    border-radius: 5px;
+    background-color: var(--bg-dark);
+    padding: 0 .7em;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    padding: 2em 1em;
     justify-content: space-between;
+    height: auto;
+    margin: 1.9em 0 1.9em 1.9em;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 nav .navItem{
-    color: rgb(63, 63, 63);
+    color: var(--text-dark);
     padding: 0.6em;
     margin: 0.1em;
     border-radius: 0.5em;
@@ -18,29 +24,47 @@ nav .navItem{
 }
 
 nav .navItem:hover{
-    background-color: rgb(113, 195, 144);
-    color: white;
+    color: rgb(113, 195, 144);
     transition: 0.2s;
 }
 
-nav .navIcon{
-    margin-right: 0.4em;
-    height: 1em;
-    width: 1em;
-}
-
-.logo{
-    width: 7.5em;
+nav .navButton{
+    width: auto;
+    height: 3em;
     margin-bottom: 2em;
 }
 
+nav .menuButton{
+    width: 100%;
+    height: 4.7em;
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+    border: none;
+    border-bottom: solid #4b4b4b 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .logOutArea{
+    width: 100%;
+}
+
+nav .logoutButton{
+    width: 100%;
+    height: 4.7em;
+    background-color: var(--bg-dark);
+    color: #b7b7b7;
+    border: none;
+    border-top: solid #4b4b4b 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: solid #4b4b4b 1px;
+}
+
+
 .navItem.active {
-    background-color: rgb(18, 173, 77);
-    color: white;
+    color: rgb(18, 173, 77);
     transition: 0.2s;
   }
-
-.logOut{
-    background-color: #fff;
-    border: none;
-}

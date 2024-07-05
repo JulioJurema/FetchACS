@@ -1,31 +1,31 @@
-import { AiFillAppstore, AiFillHdd, AiFillSetting, AiFillFolder, AiOutlineLogout} from "react-icons/ai";
+import { BiMenu , BiGridAlt, BiCollection, BiFolder,BiCog, BiLogOut } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
 const NavBar: React.FC = () => {
     return(
         <nav>
-            <div>
+            <div className="navAlign">
                 <div>
-                    <img className="logo" src="/public/Logo.svg" alt="Logo site" />
-                </div>
-                <div>
+                    <div className="navButton">
+                        <button className="menuButton"><BiMenu size={25}/></button>
+                    </div>
                     <NavLink className={({ isActive }) => isActive ? "navItem active" : "navItem"} to="/">
-                        <AiFillAppstore className="navIcon" size={20}/> Dashboard
+                        <BiGridAlt size={25} />
                     </NavLink>
                     <NavLink className={({ isActive }) => isActive ? "navItem active" : "navItem"} to="/devices">
-                        <AiFillHdd className="navIcon" size={20}/> Devices
+                        <BiCollection className="navIcon" size={25}/>
                     </NavLink>
                     <NavLink className={({ isActive }) => isActive ? "navItem active" : "navItem"} to="/">
-                        <AiFillFolder className="navIcon" size={20}/> Files
+                        <BiFolder className="navIcon" size={25}/>
                     </NavLink>
                     <NavLink className={({ isActive }) => isActive ? "navItem active" : "navItem"} to="/">
-                        <AiFillSetting className="navIcon" size={20}/> Config
+                        <BiCog className="navIcon" size={25}/>
                     </NavLink>
                 </div>
             </div>
-            <div>
-                <button className="logOut"><AiOutlineLogout /> Logout</button>
+            <div className="logOutArea">
+                <button className="logoutButton"><BiLogOut size={25}/></button>
             </div>
         </nav>
     );
