@@ -5,7 +5,7 @@
     padding: 0 1em;
     justify-content: space-between;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
 .hostItem h4{
@@ -32,12 +32,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #c24949;
+    color: #212121;
 }
 .hostItem button:hover{
     transition: 0.3s;
-    background-color: #e42323;
-    color: #fff;
+    color: #e42323;
 }
 
 .infoContainer{

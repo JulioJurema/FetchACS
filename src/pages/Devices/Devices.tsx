@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import CardRouterItem from "../../components/CardDevicesItem/CardDevicesItem";
 import Title from "../../components/Title/Title";
 import './Devices.css';
+import NavBar from '../../components/NavBar/NavBar';
 
 interface Device {
   id: string;
@@ -25,28 +26,33 @@ const Devices: React.FC<DevicesProps> = ({ devicesList }) => {
   };
 
   return (
-    <section className="devicesContainer">
-      <Title text="Dispositivos" description="Gerencie os dispositivos na sua rede." />
-      <div className="deviceListContainer">
-        <div className="deviceListHeader">
-          <input
-            className="searchDevices"
-            type="text"
-            placeholder="Pesquisar dispositivos..."
-            value={searchTerm}
-            onChange={handleSearchChange}
-          />
-        </div>
-        <div className="legendList">
-          <p>SSID</p>
-          <p>MAC</p>
-          <p>Modelo</p>
-          <p>Fabricante</p>
-        </div>
-        <div className="deviceList">
-          {devicesList.map((device, index) => (
-            <CardRouterItem key={index} props={device} />
-          ))}
+    <section className='screenDevices'>
+      <div className='navDevicesContainer'>
+        <NavBar />
+      </div>
+      <div className="devicesContainer">
+        <Title text="Dispositivos" description="Gerencie os dispositivos na sua rede." />
+        <div className="deviceListContainer">
+          <div className="deviceListHeader">
+            <input
+              className="searchDevices"
+              type="text"
+              placeholder="Pesquisar dispositivos..."
+              value={searchTerm}
+              onChange={handleSearchChange}
+            />
+          </div>
+          <div className="legendList">
+            <p>SSID</p>
+            <p>MAC</p>
+            <p>Modelo</p>
+            <p>Fabricante</p>
+          </div>
+          <div className="deviceList">
+            {devicesList.map((device, index) => (
+              <CardRouterItem key={index} props={device} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

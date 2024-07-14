@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AiFillDelete } from "react-icons/ai";
+import { BiDotsHorizontalRounded } from "react-icons/bi";
 import "./HostItem.css"
 
 interface HostItemProps {
@@ -20,7 +20,7 @@ const HostItem: React.FC<HostItemProps> = ({ host }) => {
         <span>{hostDescription[1]?.MACAddress?._value || '" "'}  </span>
       </div>
       <div className="delContainer">
-        <button><AiFillDelete size={20}/></button>
+        <button><BiDotsHorizontalRounded size={20}/></button>
       </div>
     </div>
   );

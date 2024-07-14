@@ -3,12 +3,13 @@ import Title from "../../components/Title/Title";
 import { useParams } from 'react-router-dom';
 import HostList from "../../components/HostsList/HostList";
 import './DeviceInfo.css'
+import HostDescription from "../../components/HostDescription/HostDescription";
 
 interface Device {
   _id: string;
   _deviceId: {
     _Manufacturer: string;
-    _SerialNumber: string;
+    _ProductClass: string;
   };
   InternetGatewayDevice: {
     LANDevice: {
@@ -44,8 +45,16 @@ const DeviceInfo: React.FC<DeviceInfoProps> = ({ devices }) => {
 
   return (
     <div className="containerDashHost">
-      <Title text={dataDevice._deviceId._Manufacturer} description={dataDevice._deviceId._SerialNumber} />
-      <HostList props={hosts} />
+      <div className="dashAlign">
+        <Title text={dataDevice._deviceId._Manufacturer} description={dataDevice._deviceId._ProductClass} />
+        <div className="dashSpaceCards">
+          <HostList props={hosts} />
+        </div>
+        
+      </div>
+      <div className="descriptionAlign">
+        <HostDescription />
+      </div>
     </div>
   );
 };

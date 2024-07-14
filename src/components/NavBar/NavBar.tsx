@@ -1,4 +1,4 @@
-import { BiMenu , BiGridAlt, BiCollection, BiFolder,BiCog, BiLogOut } from "react-icons/bi";
+import { BiMenu , BiGridAlt, BiServer, BiFolder,BiCog, BiLogOut } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
@@ -14,7 +14,7 @@ const NavBar: React.FC = () => {
                         <BiGridAlt size={25} />
                     </NavLink>
                     <NavLink className={({ isActive }) => isActive ? "navItem active" : "navItem"} to="/devices">
-                        <BiCollection className="navIcon" size={25}/>
+                        <BiServer className="navIcon" size={25}/>
                     </NavLink>
                     <NavLink className={({ isActive }) => isActive ? "navItem active" : "navItem"} to="/">
                         <BiFolder className="navIcon" size={25}/>

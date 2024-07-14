@@ -7,8 +7,7 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: auto;
-    margin: 1.9em 0 1.9em 1.9em;
+    height: 100%;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -24,7 +23,7 @@ nav .navItem{
 }
 
 nav .navItem:hover{
-    color: rgb(113, 195, 144);
+    color: var(--primary-dark);
     transition: 0.2s;
 }
 
@@ -65,6 +64,6 @@ nav .logoutButton{
 
 
 .navItem.active {
-    color: rgb(18, 173, 77);
+    color: var(--secundary-dark);
     transition: 0.2s;
   }

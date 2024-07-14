@@ -10,8 +10,11 @@
     /* Tema Escuro */
     --bg-dark: #121212;
     --bg-dark-secondary: #1D1D1D;
-    --primary-dark: #90CAF9;
+    --primary-dark: #5E35F2;
+    --secundary-dark: #3E2ABF;
     --text-dark: #E0E0E0;
+
+
   }
 
 
@@ -35,8 +38,7 @@
 }
 
 .containerScreen .alignPages{
-    padding: 0 1.5em;
     width: 100%;
     height: auto;
-    margin: 1.9em 0;
+    margin: 1.9em;
 }   
